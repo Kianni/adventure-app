@@ -1,8 +1,8 @@
-# File name: ruDescription.py
+# File name: original.py
 # Description: This file contains the grammatical description of the phrase in Russian
 # Author: Kirill Nikolaev
 
-from desription import Phrase
+from description import Phrase
 
 
 class Original(Phrase):

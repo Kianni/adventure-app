@@ -1,8 +1,8 @@
-# File name: fiDescription.py
+# File name: translation.py
 # Description: This file contains the grammatical description of the phrase in Finnish
 # Author: Kirill Nikolaev
 
-from desription import Phrase
+from description import Phrase
 
 
 class Translation(Phrase):
