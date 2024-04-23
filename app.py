@@ -21,12 +21,16 @@ class AdventuresApp:
 
         traveller = Traveller(name, budget, land_of_residence)
 
-        print("Where would you like to travel?")
-        destination = self.select_land()
-        make_a_trip = Trip (traveller, destination)
-        # traveller.travel(destination)
-        # traveller.greet(destination)
-        # traveller.work()
+        while True:
+            print("Where would you like to travel?")
+            destination = self.select_land()
+            make_a_trip = Trip(traveller, destination)
+
+            print("Would you like to make another trip? (yes/no)")
+            another_trip = input().lower()
+            if another_trip != 'yes':
+                print(f"Enjoy your time in {destination['name']}!")
+                break
     
     def select_land(self):
         for i, land in enumerate(data.lands, start=1):

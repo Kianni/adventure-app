@@ -9,7 +9,7 @@ class Trip:
         if self.traveller.land == self.destination:
             print(f"{self.traveller.name} is already in {self.destination['name']}. Enjoy!!!")
 
-        self.check_budget_and_travel()
+        self.start()
 
     def check_budget_and_travel(self):
         if self.traveller.budget >= 100:  # Assume travel cost is 100
