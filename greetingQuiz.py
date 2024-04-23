@@ -10,13 +10,17 @@ class GreetingQuiz:
         self.lands = lands
         self.initial_land = initial_land
 
-    def start(self):
+    def set_land(self):
         # Select the initial land for the first quiz, then a random land for subsequent quizzes
         if self.initial_land:
             quiz_land = self.initial_land
             self.initial_land = None  # Reset initial_land after the first quiz
         else:
-            quiz_land = random.choice(self.lands)
+            quiz_land = random.choice(self.lands) 
+        return quiz_land
+
+    def start(self):
+        quiz_land = self.set_land()
 
         # Prepare the correct and incorrect answers
         correct_answer = quiz_land["greeting"]["response"]

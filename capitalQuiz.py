@@ -5,13 +5,17 @@ class CapitalQuiz:
         self.lands = lands
         self.initial_land = initial_land
 
-    def start(self):
+    def set_land(self):
         # Select the initial land for the first quiz, then a random land for subsequent quizzes
         if self.initial_land:
-            correct_land = self.initial_land
+            quiz_land = self.initial_land
             self.initial_land = None  # Reset initial_land after the first quiz
         else:
-            correct_land = random.choice(self.lands)
+            quiz_land = random.choice(self.lands) 
+        return quiz_land
+
+    def start(self):
+        correct_land = self.set_land()
 
         incorrect_lands = random.sample([land for land in self.lands if land != correct_land], 3)
         options = [correct_land] + incorrect_lands
