@@ -6,6 +6,7 @@ import random
 from capitalQuiz import CapitalQuiz
 import data
 from greetingQuiz import GreetingQuiz
+from colorama import Fore, Style
 
 class Trip:
     def __init__(self, traveller, destination):
@@ -16,7 +17,7 @@ class Trip:
 
     def check_budget_and_travel(self):
         if self.traveller.budget >= 100:  # Assume travel cost is 100
-            print(f"Welcome to {self.destination.name}, {self.traveller.name}!")
+            print(f"Welcome to {Fore.GREEN}{Style.BRIGHT}{self.destination.name}, {Style.RESET_ALL}{self.traveller.name}!")
             self.traveller.budget -= 100  # Decrease budget by travel cost
             return True
         else:
