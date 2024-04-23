@@ -14,7 +14,7 @@ class AdventuresApp:
         print("Hello, stranger! What is your name?")
         name = input()
         print("What is your budget?")
-        budget = input()
+        budget = int(input())
 
         print("What is your land of residence?")
         land_of_residence = self.select_land()

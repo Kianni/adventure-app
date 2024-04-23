@@ -13,7 +13,7 @@ class Trip:
 
     def check_budget_and_travel(self):
         if self.traveller.budget >= 100:  # Assume travel cost is 100
-            print(f"Welcome to {self.destination}, {self.traveller.name}!")
+            print(f"Welcome to {self.destination['name']}, {self.traveller.name}!")
             self.traveller.budget -= 100  # Decrease budget by travel cost
             return True
         else:
