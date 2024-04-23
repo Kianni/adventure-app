@@ -2,7 +2,10 @@
 # Description: This file contains the data about the lands
 # Author: Kirill Nikolaev
 
-lands = [
+from land import Land
+
+
+lands_data = [
     {
         "name": "Morocco",
         "capital": "Rabat",
@@ -40,3 +43,5 @@ lands = [
         "currency": "Euro"
     }
 ]
+
+lands = [Land(**land_data) for land_data in lands_data]

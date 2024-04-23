@@ -16,11 +16,11 @@ class Trip:
 
     def check_budget_and_travel(self):
         if self.traveller.budget >= 100:  # Assume travel cost is 100
-            print(f"Welcome to {self.destination['name']}, {self.traveller.name}!")
+            print(f"Welcome to {self.destination.name}, {self.traveller.name}!")
             self.traveller.budget -= 100  # Decrease budget by travel cost
             return True
         else:
-            print(f"{self.traveller.name} does not have enough budget to travel.")
+            print(f"{self.traveller.name} you do not have enough budget to travel.")
             return False
 
     def start_quiz(self):
@@ -34,7 +34,7 @@ class Trip:
             while not quiz_result:
                 quiz_result = quiz.start()
                 if quiz_result:
-                    print("You've won the quiz! Your budget has been increased by 100.")
+                    print("You've won the quiz! You have got a ticket!")
                     self.traveller.budget += 100
                 else:
                     print("You've lost the quiz. Would you like to try again? (yes/no)")

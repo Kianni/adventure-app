@@ -14,16 +14,16 @@ class CapitalQuiz(Quiz):
         options = [correct_land] + incorrect_lands
         random.shuffle(options)
 
-        print(f"What is the capital of {correct_land['name']}?")
+        print(f"What is the capital of {correct_land.name}?")
         for i, option in enumerate(options, 1):
-            print(f"{i}. {option['capital']}")
+            print(f"{i}. {option.capital}")
 
         answer = int(input("Enter the number of your choice: "))
         if options[answer - 1] == correct_land:
             print("Correct!")
             return True
         else:
-            print(f"Wrong! The correct answer is {correct_land['capital']}.")
+            print(f"Wrong! The correct answer is {correct_land.capital}.")
             return False
         
         
