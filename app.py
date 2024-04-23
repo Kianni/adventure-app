@@ -24,7 +24,10 @@ class AdventuresApp:
         while True:
             print("Where would you like to travel?")
             destination = self.select_land()
-            make_a_trip = Trip(traveller, destination)
+            if traveller.land['name'] == destination['name']:
+                print(f"{traveller.name}, you are already in {destination['name']}. Enjoy!!!")
+            else:
+                make_a_trip = Trip(traveller, destination)
 
             print("Would you like to make another trip? (yes/no)")
             another_trip = input().lower()

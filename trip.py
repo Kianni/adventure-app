@@ -8,9 +8,6 @@ class Trip:
         self.traveller = traveller
         self.destination = destination
 
-        if self.traveller.land == self.destination:
-            print(f"{self.traveller.name} is already in {self.destination['name']}. Enjoy!!!")
-
         self.start()
 
     def check_budget_and_travel(self):
