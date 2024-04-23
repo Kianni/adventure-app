@@ -1,5 +1,5 @@
-# File name: greeting.py
-# Description: This file contains the greeting message
+# File name: greetingQuiz.py
+# Description: This file contains the greeting quiz
 # Author: Kirill Nikolaev
 
 

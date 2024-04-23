@@ -1,3 +1,7 @@
+# File name: capitalQuiz.py
+# Description: Create a quiz to guess the capital of a country
+# Author: Kirill Nikolaev
+
 import random
 from quiz import Quiz
 

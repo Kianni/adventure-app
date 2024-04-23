@@ -1,3 +1,7 @@
+# File name: quiz.py
+# Description: Create a parent class for Quizes
+# Author: Kirill Nikolaev
+
 import random
 
 class Quiz:

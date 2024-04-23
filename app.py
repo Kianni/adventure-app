@@ -1,5 +1,5 @@
 # File name: app.py
-# Description: an app, which allows to feed original and translation phrases and check the statistics of how to translate future
+# Description: an app, which allows a user to travel imaginarily to different countries
 # Author: Kirill Nikolaev
 
 from trip import Trip

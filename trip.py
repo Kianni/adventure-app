@@ -1,3 +1,7 @@
+# File name: trip.py
+# Description: Create a class Trip which checks the budget and travel, starts a quiz, and increases the budget
+# Author: Kirill Nikolaev
+
 import random
 from capitalQuiz import CapitalQuiz
 import data
