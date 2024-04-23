@@ -1,5 +1,7 @@
+import random
+from capitalQuiz import CapitalQuiz
 import data
-from greeting import GreetingQuiz
+from greetingQuiz import GreetingQuiz
 
 class Trip:
     def __init__(self, traveller, destination):
@@ -24,7 +26,8 @@ class Trip:
         print(f"{self.traveller.name}, would you like to take a quiz to increase your budget?")
         answer = input()
         if answer.lower() == "yes":
-            quiz = GreetingQuiz(data.lands, self.destination)
+            quiz_class = random.choice([GreetingQuiz, CapitalQuiz])
+            quiz = quiz_class(data.lands, self.destination)
             quiz_result = False
 
             while not quiz_result:
