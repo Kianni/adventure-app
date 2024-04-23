@@ -2,52 +2,40 @@
 # Description: an app, which allows to feed original and translation phrases and check the statistics of how to translate future
 # Author: Kirill Nikolaev
 
-from original import Original
-from translation import Translation
+from trip import Trip
+from traveller import Traveller
+import data
 
-class PhraseApp:
+class AdventuresApp:
     def __init__(self):
         pass
 
     def run(self):
-        print("Welcome!")
+        print("Hello, stranger! What is your name?")
+        name = input()
+        print("What is your budget?")
+        budget = input()
 
-        while True:
-            print("\nWhat would you like to do?")
-            print("1. Feed original phrase")
-            print("2. Feed translation phrase")
-            print("3. Check the statistics of how to translate future")
-            print("4. Exit")
+        print("What is your land of residence?")
+        land_of_residence = self.select_land()
 
-            choice = input("Enter your choice: ")
+        traveller = Traveller(name, budget, land_of_residence)
 
-            if choice == '1':
-                self.feed_original_phrase()
-            elif choice == '2':
-                self.feed_translation_phrase()
-            elif choice == '3':
-                # Here you can add the code to check the statistics of how to translate future
-                pass
-            elif choice == '4':
-                break
-            else:
-                print("Invalid choice. Please try again.")
+        print("Where would you like to travel?")
+        destination = self.select_land()
+        make_a_trip = Trip (traveller, destination)
+        # traveller.travel(destination)
+        # traveller.greet(destination)
+        # traveller.work()
+    
+    def select_land(self):
+        for i, land in enumerate(data.lands, start=1):
+            print(f"{i}. {land['name']}")
 
-    def feed_original_phrase(self):
-        phrase = input("Enter the original phrase: ")
-        verb_form = input("Enter the verb form: ")
-        aspect = input("Enter the aspect: ")
-        adverb = input("Enter the adverb (optional): ")
-        object = input("Enter the object (optional): ")
-        original = Original(phrase, verb_form, aspect, adverb, object)
+        choice = int(input("Enter the number of your choice: "))
+        return data.lands[choice - 1]
 
-    def feed_translation_phrase(self):
-        phrase = input("Enter the translation phrase: ")
-        verb_form = input("Enter the verb form: ")
-        adverb = input("Enter the adverb (optional): ")
-        object = input("Enter the object (optional): ")
-        translation = Translation(phrase, verb_form, adverb, object)
 
 # To run the app
-app = PhraseApp()
+app = AdventuresApp()
 app.run()
