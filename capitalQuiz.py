@@ -1,19 +1,8 @@
 import random
+from quiz import Quiz
 
-class CapitalQuiz:
-    def __init__(self, lands, initial_land=None):
-        self.lands = lands
-        self.initial_land = initial_land
 
-    def set_land(self):
-        # Select the initial land for the first quiz, then a random land for subsequent quizzes
-        if self.initial_land:
-            quiz_land = self.initial_land
-            self.initial_land = None  # Reset initial_land after the first quiz
-        else:
-            quiz_land = random.choice(self.lands) 
-        return quiz_land
-
+class CapitalQuiz(Quiz):
     def start(self):
         correct_land = self.set_land()
 
@@ -32,6 +21,8 @@ class CapitalQuiz:
         else:
             print(f"Wrong! The correct answer is {correct_land['capital']}.")
             return False
+        
+        
 if __name__ == "__main__":
     import data
 
