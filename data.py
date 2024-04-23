@@ -9,7 +9,7 @@ lands_data = [
     {
         "name": "Morocco",
         "capital": "Rabat",
-        "greeting": {"phrase": "Salam", "response": "Wa alaikum assalam"},
+        "greeting": {"phrase": "سلام[Salam]", "response": "وعليكم السلام[Wa alaikum assalam]"},
         "currency": "Moroccan Dirham"
     },
     {
@@ -27,13 +27,13 @@ lands_data = [
     {
         "name": "Japan",
         "capital": "Tokyo",
-        "greeting": {"phrase": "Konnichiwa, ogenki desu ka?", "response": "Hai, genki desu."},
+        "greeting": {"phrase": "こんにちは、お元気ですか？[Konnichiwa, ogenki desu ka]", "response": "はい、元気です[Hai, genki desu]"},
         "currency": "Yen"
     },
     {
         "name": "Russia",
         "capital": "Moscow",
-        "greeting": {"phrase": "Zdravstvuyte, kak dela?", "response": "Horosho, spasibo!"},
+        "greeting": {"phrase": "Здравствуйте, как дела? [Zdravstvuyte, kak dela?]", "response": "Хорошо, спасибо [Horosho, spasibo!]"},
         "currency": "Ruble"
     },
     {
